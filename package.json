@@ -27,5 +27,13 @@
   "dependencies": {
     "csstype": "^3.1.1"
   },
-  "type": "module"
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/psoaresbj/styled-utils.git"
+  },
+  "type": "module",
+  "types": "dist/index.d.ts"
 }
