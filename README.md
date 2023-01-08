@@ -12,9 +12,9 @@ Util functions to add your style-in-js cool supa'powers!
 - VariationProps
 
 ## Example
-1 [Handle TS types](example/src/theme/types.ts)
-2 [Add generator to your theme](example/src/theme/generator.ts)
-3 [Apply to components - example with styled components](example/src/components/Example.tsx)
+- 1 [Handle TS types](example/src/theme/types.ts)
+- 2 [Add generator to your theme](example/src/theme/generator.ts)
+- 3 [Apply to components - example with styled components](example/src/components/Example.tsx)
 
 ## License
 
