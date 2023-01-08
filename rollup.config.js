@@ -5,20 +5,18 @@ import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 import resolve from '@rollup/plugin-node-resolve';
 import typescript from '@rollup/plugin-typescript';
 
-const packageJson = require('./package.json');
-
 export default [
   {
     external: ['csstype'],
     input: 'src/index.ts',
     output: [
       {
-        file: packageJson.main,
+        file: 'dist/cjs/index.js',
         format: 'cjs',
         sourcemap: true
       },
       {
-        file: packageJson.module,
+        file: 'dist/esm/index.js',
         format: 'esm',
         sourcemap: true
       }
