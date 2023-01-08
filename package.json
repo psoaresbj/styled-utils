@@ -1,11 +1,12 @@
 {
   "name": "@psoares/styled-utils",
-  "version": "0.0.2",
-  "main": "dist/cjs/index.js",
-  "module": "dist/esm/index.js",
+  "version": "0.0.3",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
   "scripts": {
-    "build": "rollup -c",
-    "start": "rollup -c -w"
+    "build": "rimraf dist && rollup -c",
+    "start": "rimraf dist && rollup -c -w",
+    "publish": "yarn build && npm publish"
   },
   "license": "MIT",
   "devDependencies": {
@@ -27,6 +28,9 @@
   "dependencies": {
     "csstype": "^3.1.1"
   },
+  "files": [
+    "dist"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/psoaresbj/styled-utils.git"

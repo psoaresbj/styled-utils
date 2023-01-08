@@ -8,7 +8,7 @@ import typescript from '@rollup/plugin-typescript';
 
 export default [
   {
-    input: './src/index.ts',
+    input: 'src/index.ts',
     output: [
       {
         file: packageJson.main,
@@ -24,8 +24,8 @@ export default [
     plugins: [peerDepsExternal(), resolve(), commonjs(), typescript({ tsconfig: './tsconfig.json' }), terser()]
   },
   {
-    input: 'dist/esm/types/index.d.ts',
-    output: [{ file: 'index.d.ts', format: 'esm' }],
+    input: 'dist/types/index.d.ts',
+    output: [{ file: 'dist/index.d.ts', format: 'esm' }],
     plugins: [dts()]
   }
 ];
