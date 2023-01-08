@@ -1,0 +1,3 @@
+{
+  "extends": ["@psoares/eslint-config/typescript"]
+}
