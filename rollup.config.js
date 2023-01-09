@@ -16,12 +16,19 @@ export default [
         sourcemap: true
       },
       {
+        exports: 'named',
         file: 'dist/esm/index.js',
         format: 'esm',
         sourcemap: true
       }
     ],
-    plugins: [peerDepsExternal(), resolve(), commonjs(), typescript({ tsconfig: './tsconfig.json' }), terser()]
+    plugins: [
+      peerDepsExternal(),
+      resolve(),
+      commonjs({ extensions: ['.js', '.ts'] }),
+      typescript({ tsconfig: './tsconfig.json' }),
+      terser()
+    ]
   },
   {
     input: 'dist/esm/types/index.d.ts',
