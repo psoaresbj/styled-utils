@@ -38,7 +38,7 @@ const applyPlainProp = (parsedProp: ParsedProp) => {
 
   const value = typeof list?.[propValue] !== 'undefined' ? list[propValue] : propValue;
 
-  if ((!cssProp && !helperFn) || !value) {
+  if ((!cssProp && !helperFn) || (value !== 0 && !value)) {
     return;
   }
 
@@ -63,7 +63,7 @@ const applyMqProps = (parsedProp: ParsedProp, breakpoints?: { breakpoint: string
 
   const bpsStyles =
     (breakpoints || []).reduce((result: any, { breakpoint }, index) => {
-      if (!propValue[breakpoint]) {
+      if (propValue[breakpoint] !== 0 && !propValue[breakpoint]) {
         return result;
       }
 
