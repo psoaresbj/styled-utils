@@ -94,7 +94,9 @@ export const applyParsedProps = (parsedProps: ParsedProp[], theme?: Theme) => {
     }
 
     // apply mqProps
-    if (Object.keys(propValue || {}).find(key => Object.keys(theme?.breakpoints || {}).includes(key))) {
+    if (
+      Object.keys(propValue || {}).find(key => ['from', 'upTo', ...Object.keys(theme?.breakpoints || {})].includes(key))
+    ) {
       const breakpoints = sortBreakpoints(theme?.breakpoints || {}, { asArray: true }) || [];
 
       const currentStyle = applyMqProps(parsedProp, breakpoints);
